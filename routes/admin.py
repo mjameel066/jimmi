@@ -138,6 +138,7 @@ def search():
 		return render_template("books/view.html")
 
 	keyword = request.args["keyword"]
+	data_input = request.args.get("data_input", "").strip()
 
 	if len(keyword)<1:
 		return redirect('/admin/books')
